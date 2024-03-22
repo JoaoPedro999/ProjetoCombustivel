@@ -1,6 +1,6 @@
 <H1>BRIEFING</H1>
 
-**Integrantes:** João Pedro Araújo Teixeira, Ana Clara Fernandes de Oliveira, Caroline Santos, Nicolas Schiavinato
+**Integrantes:** João Pedro Araújo Teixeira, Ana Clara Fernandes, Caroline Santos, Nicolas Schiavinato
 
 **Objetivo:** 
 
