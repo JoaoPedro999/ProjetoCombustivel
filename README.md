@@ -2,7 +2,7 @@
 
 **Integrantes:** João Pedro Araújo Teixeira, Ana Clara Fernandes de Oliveira, Caroline Santos, Nicolas Schiavinato
 
-**Objetivo** 
+**Objetivo:** 
 
 Será feito um aplicativo simples que calcule qual combustível esta compensando ( Álcool ou Gasolina ). 
 
