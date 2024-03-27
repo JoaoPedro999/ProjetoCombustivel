@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { View, Text, TextInput, Button, Modal, StyleSheet } from "react-native";
 
 export default function FuelCalculator() {
-  const [alcoholPrice, setAlcoholPrice] = useState("");
-  const [gasolinePrice, setGasolinePrice] = useState("");
+  const [alcoolValor, setAlcoolValor] = useState("");
+  const [gasolinaValor, setGasolinaValor] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
-  const [recommendation, setRecommendation] = useState("");
+  const [calcularRecommendacao, setRecomendacao] = useState("");
 
-  const calculateRecommendation = () => {
+  const calcularRecommendacao = () => {
     const alcohol = parseFloat(alcoholPrice);
     const gasoline = parseFloat(gasolinePrice);
   };
