@@ -64,6 +64,18 @@ const styles = StyleSheet.create({
     borderColor: "red",
     borderRadius: 50,
   },
+  text: {
+    fontSize: 14,
+    marginTop: 10,
+    fontWeight: "bold",
+    color: "white",
+  },
+  image: {
+    height: 120,
+    width: 120,
+    resizeMode: "cover",
+    bottom: 70,
+  },
 });
 
 export default styles;

@@ -5,7 +5,7 @@ import BtnComponent from "./src/components/btnComponent";
 import ModalComponent from "./src/components/modalComponent";
 import styles from "./src/styles/styles";
 
-export default function FuelCalculator() {
+export default function Calcular() {
   const [alcoolValor, setAlcoolValor] = useState("");
   const [gasolinaValor, setGasolinaValor] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
@@ -22,16 +22,15 @@ export default function FuelCalculator() {
 
   return (
     <View style={styles.container}>
-      <Image
-        style={{ height: 120, width: 120, resizeMode: "cover", bottom: 70 }}
-        source={require("./src/images/logo.png")}
-      />
+      <Image style={styles.image} source={require("./src/images/logo.png")} />
       <Text style={styles.title}>Calculadora de Combustível</Text>
+      <Text style={styles.text}>Preço do Alcool/Litro</Text>
       <InputComponent
         placeholder="Preço do Álcool"
         value={alcoolValor}
         onChangeText={(text) => setAlcoolValor(text)}
       />
+      <Text style={styles.text}>Preço da Gasolina/Litro</Text>
       <InputComponent
         placeholder="Preço da Gasolina"
         value={gasolinaValor}
