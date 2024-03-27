@@ -92,6 +92,10 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: "black",
   },
+  imggasolina: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
   title: {
     fontSize: 20,
     fontWeight: "bold",
