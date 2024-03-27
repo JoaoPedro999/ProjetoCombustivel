@@ -5,11 +5,13 @@ export default function FuelCalculator() {
   const [alcoolValor, setAlcoolValor] = useState("");
   const [gasolinaValor, setGasolinaValor] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
-  const [calcularRecommendacao, setRecomendacao] = useState("");
+  const [calcularRecomendacao, setRecomendacao] = useState("");
 
-  const calcularRecommendacao = () => {
-    const alcohol = parseFloat(alcoholPrice);
-    const gasoline = parseFloat(gasolinePrice);
+  const calcularRecomendacao = () => {
+    const alcool = parseFloat(alcoolValor);
+    const gasolina = parseFloat(gasolinaValor);
+
+    const setRecomendacao = resultado < 0.7 ? "Álcool" : "Gasolina";
   };
   return (
     <View style={styles.container}>
@@ -28,7 +30,7 @@ export default function FuelCalculator() {
         value={gasolinaValor}
         onChangeText={(text) => setGasolinaValor(text)}
       />
-      <Button title="Calcular" onPress={calcularRecommendacao} />
+      <Button title="Calcular" onPress={calcularRecomendacao} />
 
       <Modal
         animationType="slide"
