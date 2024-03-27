@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     justifyContent: "center",
     textAlign: "center",
-    borderRadius: 50,
+    borderRadius: 15,
   },
   btntext: {
     color: "white",
