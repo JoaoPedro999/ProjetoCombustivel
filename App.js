@@ -5,14 +5,17 @@ export default function FuelCalculator() {
   const [alcoolValor, setAlcoolValor] = useState("");
   const [gasolinaValor, setGasolinaValor] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
-  const [calcularRecomendacao, setRecomendacao] = useState("");
+  const [recomendacao, setRecomendacao] = useState("");
 
   const calcularRecomendacao = () => {
     const alcool = parseFloat(alcoolValor);
     const gasolina = parseFloat(gasolinaValor);
 
-    const setRecomendacao = resultado < 0.7 ? "Álcool" : "Gasolina";
+    const recomendacao = alcool / gasolina < 0.7 ? "Álcool" : "Gasolina";
+    setRecomendacao(recomendacao);
+    setModalVisible(true);
   };
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Calculadora de Combustível</Text>
