@@ -28,7 +28,7 @@ export default function FuelCalculator() {
     <View style={styles.container}>
       <Image
         // Define o estilo da imagem (altura de 50 pixels, largura de 50 pixels e redimensionamento para cobrir)
-        style={{ height: 100, width: 100, resizeMode: "cover" }}
+        style={{ height: 120, width: 120, resizeMode: "cover", bottom: 70 }}
         source={require("./src/images/logo.png")}
       />
       <Text style={styles.title}>Calculadora de Combustível</Text>
@@ -74,7 +74,7 @@ export default function FuelCalculator() {
               style={styles.btn}
               onPress={() => setModalVisible(false)}
             >
-              <Text style={styles.btntext}>Fechar</Text>
+              <Text style={styles.btntext}>Calcular Novamente</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -90,24 +90,21 @@ const styles = StyleSheet.create({
     alignItems: "center",
     color: "black",
     padding: 20,
-    borderWidth: 10,
-    borderRadius: 30,
-    borderColor: "black",
-    width: "10%",
+    backgroundColor: "black",
   },
   title: {
     fontSize: 20,
     fontWeight: "bold",
     marginBottom: 20,
+    color: "white",
   },
   input: {
-    width: "100%",
+    width: "90%",
     height: 40,
-    borderColor: "gray",
-    borderWidth: 1,
-    borderRadius: 5,
+    backgroundColor: "white",
     marginBottom: 10,
     paddingHorizontal: 10,
+    color: "black",
   },
   modalContainer: {
     flex: 1,
@@ -134,11 +131,20 @@ const styles = StyleSheet.create({
   },
   btn: {
     width: "100",
-    height: "100",
+    height: "200",
     backgroundColor: "red",
+    justifyContent: "center",
+    textAlign: "center",
+    borderRadius: 50,
   },
   btntext: {
     color: "white",
     fontWeight: "bold",
+    justifyContent: "center",
+    alignItems: "center",
+    lineHeight: 30,
+    borderWidth: 5,
+    borderColor: "red",
+    borderRadius: 50,
   },
 });
