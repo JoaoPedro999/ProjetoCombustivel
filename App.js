@@ -47,7 +47,7 @@ export default function FuelCalculator() {
         onChangeText={(text) => setGasolinaValor(text)}
       />
       <TouchableOpacity style={styles.btn} onPress={calcularRecomendacao}>
-        <Text>Calcular</Text>
+        <Text style={styles.btntext}>Calcular</Text>
       </TouchableOpacity>
 
       <Modal
@@ -74,7 +74,7 @@ export default function FuelCalculator() {
               style={styles.btn}
               onPress={() => setModalVisible(false)}
             >
-              <Text>Fechar</Text>
+              <Text style={styles.btntext}>Fechar</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -131,6 +131,8 @@ const styles = StyleSheet.create({
     width: "100",
     height: "100",
     backgroundColor: "red",
+  },
+  btntext: {
     color: "white",
     fontWeight: "bold",
   },
