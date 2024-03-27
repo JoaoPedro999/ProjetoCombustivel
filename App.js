@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, Modal, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  Button,
+  Modal,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 
 export default function FuelCalculator() {
   const [alcoolValor, setAlcoolValor] = useState("");
@@ -33,7 +41,9 @@ export default function FuelCalculator() {
         value={gasolinaValor}
         onChangeText={(text) => setGasolinaValor(text)}
       />
-      <Button title="Calcular" onPress={calcularRecomendacao} />
+      <TouchableOpacity onPress={calcularRecomendacao}>
+        <Text>Calcular</Text>
+      </TouchableOpacity>
 
       <Modal
         animationType="slide"
@@ -50,7 +60,9 @@ export default function FuelCalculator() {
               Preço da Gasolina: R$ {gasolinaValor}
             </Text>
             <Text style={styles.modalText}>Recomendação: {recomendacao}</Text>
-            <Button title="Fechar" onPress={() => setModalVisible(false)} />
+            <TouchableOpacity onPress={() => setModalVisible(false)}>
+              <Text>Fechar</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </Modal>
