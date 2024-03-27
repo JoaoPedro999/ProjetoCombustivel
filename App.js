@@ -74,7 +74,7 @@ export default function FuelCalculator() {
               style={styles.btn}
               onPress={() => setModalVisible(false)}
             >
-              <Text style={styles.btntext}>Fechar</Text>
+              <Text style={styles.btntext}>Calcular Novamente</Text>
             </TouchableOpacity>
           </View>
         </View>
