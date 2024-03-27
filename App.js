@@ -3,10 +3,10 @@ import {
   View,
   Text,
   TextInput,
-  Button,
   Modal,
   StyleSheet,
   TouchableOpacity,
+  Image,
 } from "react-native";
 
 export default function FuelCalculator() {
@@ -26,6 +26,11 @@ export default function FuelCalculator() {
 
   return (
     <View style={styles.container}>
+      <Image
+        // Define o estilo da imagem (altura de 50 pixels, largura de 50 pixels e redimensionamento para cobrir)
+        style={{ height: 100, width: 100, resizeMode: "cover" }}
+        source={require("./src/images/logo.png")}
+      />
       <Text style={styles.title}>Calculadora de Combustível</Text>
       <TextInput
         style={styles.input}
@@ -41,7 +46,7 @@ export default function FuelCalculator() {
         value={gasolinaValor}
         onChangeText={(text) => setGasolinaValor(text)}
       />
-      <TouchableOpacity onPress={calcularRecomendacao}>
+      <TouchableOpacity style={styles.btn} onPress={calcularRecomendacao}>
         <Text>Calcular</Text>
       </TouchableOpacity>
 
@@ -53,14 +58,22 @@ export default function FuelCalculator() {
       >
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
+            <Image
+              style={{ height: 50, width: 50, resizeMode: "cover" }}
+              // Define a fonte/caminho da imagem (neste caso, uma imagem importada localmente)
+              source={require("./src/images/gas.png")}
+            />
             <Text style={styles.modalText}>
               Preço do Álcool: R$ {alcoolValor}
             </Text>
             <Text style={styles.modalText}>
               Preço da Gasolina: R$ {gasolinaValor}
             </Text>
-            <Text style={styles.modalText}>Recomendação: {recomendacao}</Text>
-            <TouchableOpacity onPress={() => setModalVisible(false)}>
+            <Text style={styles.rectext}>Recomendação: {recomendacao}</Text>
+            <TouchableOpacity
+              style={styles.btn}
+              onPress={() => setModalVisible(false)}
+            >
               <Text>Fechar</Text>
             </TouchableOpacity>
           </View>
@@ -102,9 +115,23 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 10,
     elevation: 5,
+    alignItems: "center",
   },
   modalText: {
     fontSize: 16,
     marginBottom: 10,
+  },
+  rectext: {
+    fontSize: 16,
+    marginBottom: 10,
+    fontWeight: "bold",
+    color: "green",
+  },
+  btn: {
+    width: "100",
+    height: "100",
+    backgroundColor: "red",
+    color: "white",
+    fontWeight: "bold",
   },
 });
