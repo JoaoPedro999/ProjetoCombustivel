@@ -12,3 +12,8 @@ Dividimos o valor do litro do álcool pelo da gasolina.
 Quando o resultado é menor que 0.7, a recomendação é abastecer
 com álcool. Se maior, a recomendação é escolher a gasolina.
 
+**Designação:**
+PO: João Pedro
+Front e Back: Ana Clara
+Front: Carol
+Kanban: Schiavinato
