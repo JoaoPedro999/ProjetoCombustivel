@@ -88,7 +88,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    color: "black",
     padding: 20,
+    borderWidth: 10,
+    borderRadius: 30,
+    borderColor: "black",
+    width: "10%",
   },
   title: {
     fontSize: 20,
