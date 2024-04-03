@@ -2,11 +2,10 @@ import React from "react";
 import { Text, View } from "react-native";
 import styles from "../styles/styles";
 
-export default function TxtComponent({ texto, titulo }) {
+export default function TxtComponent({ texto, estilo }) {
   return (
     <View>
-      <Text style={styles.title}>{texto}</Text>
-      <Text style={styles.title}>{titulo}</Text>
+      <Text style={estilo}>{texto}</Text>
     </View>
   );
 }

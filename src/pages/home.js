@@ -24,21 +24,21 @@ export default function Calcular() {
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={require("../images/logo.png")} />
-      <TxtComponent titulo="Calculadora de Combustível" />
-      <TxtComponent texto="Preço do Alcool/Litro" />
+      <TxtComponent estilo={styles.title} texto="Calculadora de Combustivel" />
+      <TxtComponent estilo={styles.text} text="Preço do Álcool/Litro" />
       <InputComponent
         placeholder="Preço do Álcool"
         value={alcoolValor}
         onChangeText={(text) => setAlcoolValor(text)}
       />
-      <TxtComponent texto="Preço da Gasolina/Litro" />
+      <TxtComponent style={styles.text} texto="Preço da Gasolina/Litro" />
       <InputComponent
         placeholder="Preço da Gasolina"
         value={gasolinaValor}
         onChangeText={(text) => setGasolinaValor(text)}
       />
       <BtnComponent onPress={calcularRecomendacao}>
-        <TxtComponent texto="Calcular" />
+        <TxtComponent estilo={styles.btntext} texto="Calcular" />
       </BtnComponent>
 
       <ModalComponent

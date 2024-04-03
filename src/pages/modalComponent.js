@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, View, Image } from "react-native";
+import { Modal, View, Image, Text, TextComponent } from "react-native";
 import styles from "../styles/styles";
 import BtnComponent from "../components/btnComponent";
 import TxtComponent from "../components/textComponent";
@@ -20,19 +20,15 @@ export default function ModalComponent({
       <View style={styles.modalContainer}>
         <View style={styles.modalContent}>
           <Image style={styles.icon} source={require("../images/gas.png")} />
-          <TxtComponent style={styles.modalText}>
+          <Text style={styles.modalText}>
             Preço do Álcool: R$ {alcoolValor}
-          </TxtComponent>
-          <TxtComponent style={styles.modalText}>
+          </Text>
+          <Text style={styles.modalText}>
             Preço da Gasolina: R$ {gasolinaValor}
-          </TxtComponent>
-          <TxtComponent style={styles.rectext}>
-            Recomendação: {recomendacao}
-          </TxtComponent>
+          </Text>
+          <Text style={styles.rectext}>Recomendação: {recomendacao}</Text>
           <BtnComponent onPress={onClose}>
-            <TxtComponent style={styles.btntext}>
-              Calcular Novamente
-            </TxtComponent>
+            <TxtComponent estilo={styles.btntext} texto="Calcular Novamente" />
           </BtnComponent>
         </View>
       </View>
