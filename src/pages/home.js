@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Image, TextComponent } from "react-native";
+import { View, Image } from "react-native";
 import InputComponent from "../components/inputComponent";
 import BtnComponent from "../components/btnComponent";
 import ModalComponent from "./modalComponent";
@@ -25,20 +25,20 @@ export default function Calcular() {
     <View style={styles.container}>
       <Image style={styles.image} source={require("../images/logo.png")} />
       <TxtComponent titulo="Calculadora de Combustível" />
-      <TxtComponent style={styles.text} texto="Preço do Alcool/Litro" />
+      <TxtComponent texto="Preço do Alcool/Litro" />
       <InputComponent
         placeholder="Preço do Álcool"
         value={alcoolValor}
         onChangeText={(text) => setAlcoolValor(text)}
       />
-      <TxtComponent style={styles.text} texto="Preço da Gasolina/Litro" />
+      <TxtComponent texto="Preço da Gasolina/Litro" />
       <InputComponent
         placeholder="Preço da Gasolina"
         value={gasolinaValor}
         onChangeText={(text) => setGasolinaValor(text)}
       />
       <BtnComponent onPress={calcularRecomendacao}>
-        <TxtComponent style={styles.btntext} texto="Calcular" />
+        <TxtComponent texto="Calcular" />
       </BtnComponent>
 
       <ModalComponent
