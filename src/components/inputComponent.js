@@ -1,5 +1,5 @@
 import React from "react";
-import { TextInput, StyleSheet } from "react-native";
+import { TextInput } from "react-native";
 import styles from "../styles/styles";
 
 export default function InputComponent({ placeholder, value, onChangeText }) {

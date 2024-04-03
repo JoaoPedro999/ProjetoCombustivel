@@ -1,13 +1,7 @@
 import React from "react";
-import {
-  Modal,
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  Image,
-} from "react-native";
+import { Modal, View, Text, Image } from "react-native";
 import styles from "../styles/styles";
+import BtnComponent from "./btnComponent";
 
 export default function ModalComponent({
   visible,
@@ -33,9 +27,9 @@ export default function ModalComponent({
             Preço da Gasolina: R$ {gasolinaValor}
           </Text>
           <Text style={styles.rectext}>Recomendação: {recomendacao}</Text>
-          <TouchableOpacity style={styles.btn} onPress={onClose}>
+          <BtnComponent onPress={onClose}>
             <Text style={styles.btntext}>Calcular Novamente</Text>
-          </TouchableOpacity>
+          </BtnComponent>
         </View>
       </View>
     </Modal>

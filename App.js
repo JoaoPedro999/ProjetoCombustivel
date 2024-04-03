@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, Image } from "react-native";
 import InputComponent from "./src/components/inputComponent";
 import BtnComponent from "./src/components/btnComponent";
 import ModalComponent from "./src/components/modalComponent";
@@ -36,7 +36,9 @@ export default function Calcular() {
         value={gasolinaValor}
         onChangeText={(text) => setGasolinaValor(text)}
       />
-      <BtnComponent onPress={calcularRecomendacao} />
+      <BtnComponent onPress={calcularRecomendacao}>
+        <Text style={styles.btntext}>Calcular</Text>
+      </BtnComponent>
 
       <ModalComponent
         visible={modalVisible}
