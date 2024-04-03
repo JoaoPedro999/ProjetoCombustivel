@@ -1,7 +1,12 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 import styles from "../styles/styles";
 
-export default function TxtComponent() {
-  return <Text style={styles.text}>{texto}</Text>;
+export default function TxtComponent({ texto, titulo }) {
+  return (
+    <View>
+      <Text style={styles.title}>{texto}</Text>
+      <Text style={styles.title}>{titulo}</Text>
+    </View>
+  );
 }
