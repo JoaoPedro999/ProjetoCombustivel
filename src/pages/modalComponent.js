@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal, View, Text, Image } from "react-native";
 import styles from "../styles/styles";
-import BtnComponent from "./btnComponent";
+import BtnComponent from "../components/btnComponent";
 
 export default function ModalComponent({
   visible,
