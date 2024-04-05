@@ -27,18 +27,18 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "black",
   },
   modalContent: {
-    backgroundColor: "white",
+    backgroundColor: "black",
     padding: 20,
-    borderRadius: 10,
     elevation: 5,
     alignItems: "center",
   },
   modalText: {
     fontSize: 16,
     marginBottom: 10,
+    color: "white",
   },
   rectext: {
     fontSize: 16,
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
   btntext: {
     color: "white",
     fontWeight: "bold",
+    fontSize: 20,
     justifyContent: "center",
     alignItems: "center",
     lineHeight: 30,
@@ -73,6 +74,10 @@ const styles = StyleSheet.create({
   image: {
     height: 120,
     width: 120,
+    resizeMode: "cover",
+    bottom: 70,
+  },
+  icon: {
     resizeMode: "cover",
     bottom: 70,
   },
